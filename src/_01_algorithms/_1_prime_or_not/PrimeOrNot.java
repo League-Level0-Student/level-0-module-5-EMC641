@@ -5,9 +5,21 @@ import javax.swing.JOptionPane;
 public class PrimeOrNot {
 public static void main(String[] args) {
 	
-	String primenumber = JOptionPane.showInputDialog("Give me a number");
+	String primenumberstring = JOptionPane.showInputDialog("Give me a number");
+	int primenumber = Integer.parseInt(primenumberstring);  
+
 	
-   
+   for(int i=2; i<primenumber; i++)  {
+	   if(primenumber%i==0)  {
+		   JOptionPane.showMessageDialog(null, "That number isn't prime.");
+
+  }
+	   
+	   else {
+		   JOptionPane.showMessageDialog(null, "That number is prime.");
+	   }
+	   
+   }
 	
 	
 	
