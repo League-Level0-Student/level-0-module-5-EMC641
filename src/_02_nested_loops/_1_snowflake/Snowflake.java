@@ -24,7 +24,7 @@ public class Snowflake {
 		rob.setSpeed(5);
 
 		// #5. use a for loop below to do everything ( #6, #7, #8, #9, #12, #13, #14 ) 6 times (use i as the counter)
-
+//hello
 			
 			// #6. Set the pen color to black
 		for(int i=0; i<6; i++) {
