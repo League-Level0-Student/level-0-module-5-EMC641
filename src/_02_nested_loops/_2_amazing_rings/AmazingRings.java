@@ -7,8 +7,8 @@ import processing.core.PImage;
  * Goal: Create a pair of Amazing Rings!
  * 
  * 1. Open the demonstration for this recipe by opening the Recipe.html
- *    file in this folder.
- * 
+ *    file in this folder
+ *    
  * In the setup() method:
  * 2. Set the size of your window to be a rectangle like in the recipe
  *    demonstration
@@ -39,24 +39,56 @@ import processing.core.PImage;
 public class AmazingRings extends PApplet {
     static final int WIDTH = 800;
     static final int HEIGHT = 600;
-
+int x=400;
+int x2=200;
+int x3=500;
+int v=4;
     PImage waldo;
 
     @Override
     public void settings() {
+    	size(800,600);
 
     }
 
     @Override
     public void setup() {
-
+    	noFill();
     }
 
     @Override
     public void draw() {
-
+    background(255,255,255);
+    	int s=400;
+    	for(int i=8; i>0; i--)   {
+    	ellipse(x,250,s,s);
+    	s-=50;
+    	
+    			
+    }
+    	x-=v;
+    
+    	s=400;
+    	for(int i=8; i>0; i--)   {
+    	ellipse(x2,250,s,s);
+    	s-=50;
+    	}
+    	x2+=v;
+    	
+    	if(x<=0 ) {
+    		v=-v;
+    	}
+    	
+    	for(int i=8; i>0; i--)   {
+        	ellipse(x3,250,s,s);
+        	s-=50;
+        	}
+    	x3+=v;
+    	
+    	
     }
 
+    
     static public void main(String[] args) {
         PApplet.main(AmazingRings.class.getName());
     }
